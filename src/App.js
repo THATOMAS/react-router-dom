@@ -4,14 +4,16 @@ import data from "./data";
 import "./index.css";
 
 function App() {
+  const [people, setPeople] = useState(data)
 
   return <>
     <main>
 
+
       <section className="container">
-        <h3>Birthdays today</h3>
-        <List />
-        <button onClick={() => console.log("You clicked me")}>CLEAR ALL</button>
+        <h3> {people.length} Birthdays today</h3>
+        <List people={people} className="people" />
+        <button onClick={() => setPeople([])} > CLEAR ALL</button>
       </section>
 
     </main>
