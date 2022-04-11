@@ -1,24 +1,15 @@
-import React, { useState } from "react";
-import List from "./List";
-import data from "./data";
-import "./index.css";
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
-function App() {
-  const [people, setPeople] = useState(data)
-
-  return <>
-    <main>
-
-
-      <section className="container">
-        <h3> {people.length} Birthdays today</h3>
-        <List people={people} className="people" />
-        <button onClick={() => setPeople([])} > CLEAR ALL</button>
-      </section>
-
-    </main>
-
-  </>
+export default function App() {
+  return (
+    <div>
+      <h1>Bookkeeper ! </h1>
+      <nav style={{ borderBottom: "solid 1px", paddingBottom: "1rem" }}>
+        <Link to="/invoices">Invoices</Link>
+        <Link to="/expenses">Expenses</Link>
+      </nav>
+      <Outlet />
+    </div>
+  );
 }
-
-export default App;

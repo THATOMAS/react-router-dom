@@ -1,37 +1,36 @@
-export default [
-    {
-        id: 1,
-        name: 'Bertie Yates',
-        age: 29,
-        image:
-            'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-2_ipcjws.jpg',
-    },
-    {
-        id: 2,
-        name: 'Hester Hogan',
-        age: 32,
-        image:
-            'https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959131/person-3_rxtqvi.jpg',
-    },
-    {
-        id: 3,
-        name: 'Larry Little',
-        age: 36,
-        image:
-            'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883423/person-4_t9nxjt.jpg',
-    },
-    {
-        id: 4,
-        name: 'Sean Walsh',
-        age: 34,
-        image:
-            'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg',
-    },
-    {
-        id: 5,
-        name: 'Lola Gardner',
-        age: 29,
-        image:
-            'https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg',
-    },
+let invoices = [
+  {
+    name: "Santa Monica",
+    number: 1995,
+    amount: "$10,800",
+    due: "12/05/1995",
+  },
+  {
+    name: "Stankonia",
+    number: 2000,
+    amount: "$8,000",
+    due: "10/31/2000",
+  },
+  {
+    name: "Ocean Avenue",
+    number: 2003,
+    amount: "$9,500",
+    due: "07/22/2003",
+  },
+  {
+    name: "Tubthumper",
+    number: 1997,
+    amount: "$14,000",
+    due: "09/01/1997",
+  },
+  {
+    name: "Wide Open Spaces",
+    number: 1998,
+    amount: "$4,600",
+    due: "01/27/1998",
+  },
 ];
+
+export function getInvoices() {
+  return invoices;
+}
